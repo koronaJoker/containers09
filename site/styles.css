@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #000;
+}
+.container {
+    transition: 0.4s ease   ;
+    transform: scale(0.8);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container div {
+    position: absolute;
+}
+
+.bg {
+    width: 400px;
+    height: 400px;
+    background: gray;
+    border-radius: 50%;
+    border:5px solid black;
+}
+
+.light_bordered_circle {
+    width: 430px;
+    height: 430px;
+    background: darkgrey;
+    border-radius: 50%;
+    border:20px solid black;
+}
+
+.margine {
+    width: 468px;
+    height: 468px;
+    border: 40px solid #444;
+    border-radius: 50%;
+}
+
+.margine_circle {
+
+    width: 548px;
+    height: 548px;
+    border:5px solid black;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.circle {
+
+
+    background: #444444;
+    border:5px solid black;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+}
+
+
+.left {
+    transform: translate(-50%, -50%) rotate(180deg) translate(239px);
+}
+
+.top {
+    transform: translate(-50%, -50%) rotate(270deg) translate(239px);
+}
+
+.right {
+    transform: translate(-50%, -50%) rotate(0deg) translate(239px);
+}
+
+.bottom {
+    transform: translate(-50%, -50%) rotate(90deg) translate(239px);
+}
+
+.circle::after {
+    background: chartreuse;
+    width: 45px;
+    height: 45px;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    border:5px solid black;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-30%, -50%);
+
+
+
+}
+
+.container {
+
+    transition: transform 0.7s ease;
+}
+
+img {
+    cursor: pointer;
+    transition: 0.7s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+
+}
+
+
+img:hover {
+    filter: drop-shadow(0px 0px 150px chartreuse)
+            drop-shadow(0px 0px 30px lightgreen);
+
+}
+
+
+.flash {
+    animation: flashEffect 0.5s ease;
+}
+
+@keyframes flashEffect {
+    0% {
+        filter: brightness(1) drop-shadow(0 0 0px chartreuse);
+    }
+    50% {
+        filter: brightness(2) drop-shadow(0 0 60px chartreuse);
+    }
+    100% {
+        filter: brightness(1) drop-shadow(0 0 20px chartreuse);
+    }
+}
